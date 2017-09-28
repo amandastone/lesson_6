@@ -13,9 +13,9 @@
 
 </head>
 <body>
-    <div class='container'>
+    <div class='container-fluid'>
     <div class='row'>
-        <div class='col-12 border'>
+        <div class='col-md-12 border'>
             <header id='header'>
                 
             <h1>Web Ninja</h1>
@@ -27,12 +27,12 @@
     </div>
 <!--End Header-->
     <div class='row'>
-        <div class='col-12 border'>
+        <div class='col-md-12 border'>
           <nav id="nav">
                 <ul class='button-wrap'>
                     <button>Schedule</button>
-                    <button>CSS</button>
-                    <button>HTML</button>                <button>Responisive Design</button>
+                    <button data-toggle="modal" data-target="#css3_modal">CSS</button>
+                    <button  data-toggle="modal" data-target="#html5_modal">HTML</button>                <button>Responisive Design</button>
                 </ul> 
             </nav> 
         </div>
@@ -40,11 +40,11 @@
 <!--End menu-->                 
        
         <div class='row max-width'>
-           <div class='col-8 border'>
+           <div class='col-md-8 border'>
            
                <div id='main-content-wrapper'>  
                 <div class="side-by-side">
-                    <section class="image-content">
+                    <section class="image-content col-md-6">
                     
                         <img src="images/amanda.jpg">
                         <h4>
@@ -71,7 +71,7 @@
                </div>
             </div>
             <!--end main-content-wrapper-->
-               <div class='col-4 border'>
+               <div class='col-md-4 border'>
                <div id="aside-content-wrapper">
                     <aside id='aside-right'>
                         <h3>Latest work</h3>
@@ -91,26 +91,53 @@
             <!--end middle-wrapper-->
      </div>
 
-            <div id='favorite-sites' class="row">
+            <div id='favorite-sites'>
+                <div class="row">
             
-                    <div class='col-4 border'>
-                        <img src='images/fbook.png'>
+                    <div class='col-md-4 border'>
+                        <img class="img-responsive"src='images/fbook.png'>
                     </div>
-                    <div class='col-4 border'>
-                        <img src='images/gplus.png'>
+                    <div class='col-md-4 border'>
+                        <img class="img-responsive"src='images/gplus.png'>
                 </div>
-                    <div class='col-4 border'>
-                        <img src='images/twitter.png'>
+                    <div class='col-md-4 border'>
+                        <img class="img-responsive"src='images/twitter.png'>
                     </div>
-                
+                </div>
                 
         </div>
         <div class="row">
-            <div class='col-12 border'>
+            <div class='col-md-12 border'>
         <footer><h1>footy</h1></footer>
             </div>
         </div>
 </div>
+<!--End Container Div    -->
+<!-- Modal-html5 -->
+<div class="modal fade" id="html5_modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+      </div>
+      <div class="modal-body">
+          <div class='img-modal'>
+       <img src="images/html5.png">
+          </div>
+          <br>
+          <p><strong>html5</strong>is the latest standard released by the World Wide Web consortium (www.w3.org) for web pages. Making sure that your pages comply with standards like HTML4 will allow your site to be viewed by the maximum number of visitors.</p>
+          
+          <p>Source:</p><span><a
+        href='https://developer.mozilla.org/en-US/docs/web/css/css3'>https://developer.mozilla.org/en-us/docs/web/css/css3</a></span>
+      </div>
+      <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+    
 <script src="js/jquery.min.js"></script>  
 <script src="js/bootstrap.min.js"></script>
 <script src="js/main.js"></script>
@@ -118,3 +145,21 @@
   </body>
     
 </html>
+<!-- Modal-css3 -->
+<div class="modal fade" id="css3_modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+      </div>
+      <div class="modal-body">
+        ...
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Save changes</button>
+         </div>
+    </div>
+  </div>
+</div>
